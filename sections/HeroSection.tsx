@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
         aria-hidden="true"
         className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center z-0"
       >
-        PASSIONATE PROGRAMMER FREELANCER FULL-STACK DEVELOPER
+        passionate about solving real world problem
       </span>
 
       <div className="image-animation z-10 select-none mt-0 xs:mt-6 sm:mt-14 lg:mt-0 px-0 mx-auto lg:p-0 lg:basis-1/3">
@@ -124,32 +124,30 @@ const HeroSection: React.FC = () => {
         </span>
         <div className="overflow-hidden">
           <h1 className="text-animation text-4xl md:text-5xl lg:text-7xl md:my-2 font-semibold my-1">
-            Sat Naing
+            Arjun Chidambaram Subbiah
           </h1>
         </div>
         <div className="overflow-hidden">
           <span className="text-animation text-2xl md:text-3xl lg:text-5xl block md:my-3 text-marrsgreen dark:text-carrigreen font-medium">
-            A Full-stack Developer
+            A Data Scientist
           </span>
         </div>
         <div className="mt-2 my-4 md:mb-8">
-          <p className="mb-1">
-            I am a Full-Stack Developer with a passion for delivering
-            exceptional results.
-          </p>
-          <p>
-            With my expertise in React and NextJS on the frontend, and PHP,
-            CodeIgniter, NodeJS, and Express on the backend, I bring a unique
-            combination of technical skills and creative problem-solving to
-            every project I work on.
-          </p>
-        </div>
+        <p className="mb-1">
+          I am a passionate Data Scientist with 8 years of experience in the data space, 
+          specializing in machine learning and analytics.
+        </p>
+        <p>
+          With a background in Mechanical and Industrial Engineering, I transform 
+          complex data into actionable insights that drive business decisions.
+        </p>
+      </div>
         <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
           Contact me!
         </LinkButton>
       </div>
       <a
-        href="#whoami"
+        href="#wwhoami"
         className="group absolute link-outline animate-bounce hidden md:bottom-14 lg:bottom-16 left-1/2 transform -translate-x-1/2 md:flex items-center flex-col"
       >
         <span className="group-hover:text-marrsgreen dark:group-hover:text-carrigreen">

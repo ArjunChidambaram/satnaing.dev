@@ -96,7 +96,7 @@ const AboutSection: React.FC = () => {
   const aboutSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
   useEffect(() => {
-    aboutSection ? onSectionChange!("who am i?") : onSectionChange!("");
+    aboutSection ? onSectionChange!("whoami") : onSectionChange!("");
   }, [aboutSection, onSectionChange]);
 
   return (
@@ -169,21 +169,30 @@ const AboutSection: React.FC = () => {
             </div>
 
             <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
-              With 4+ years of comprehensive experience in web application
-              development, I have polished my skills in both frontend and
-              backend development. In addition to my hands-on experience in web
-              development, my education has also played a critical role in
-              providing a strong foundation for my career.
+              Data Scientist with 8+ years of experience leading data science projects and delivering strategic business solutions. 
+              Expert in developing advanced data models, algorithms, and reporting systems that drive decision-making across organizations. 
+              Proven track record of managing cross-functional teams, ensuring data quality, and mentoring junior scientists 
+              Specialized in complex dataset analysis, stakeholder collaboration, and translating data insights into actionable business strategies.
             </p>
 
             <div
               className="col-start-3 col-end-6 row-start-1 row-end-6 lg:row-start-2 lg:row-end-7 md:ml-8 place-content-end"
               ref={eduRef}
             >
-              <p className="edu-bg my-4">Here is my educational background.</p>
+              <p className="edu-bg my-4">Here is my work exp.</p>
+              {workInfo.map((edu) => (
+                <EduGroup edu={edu} key={edu.id} />
+              ))}
+            <div
+              className="col-start-3 col-end-6 row-start-1 row-end-6 lg:row-start-2 lg:row-end-7 md:ml-8 place-content-end"
+              ref={eduRef}
+            ></div>
+
+              <p className="edu-bg my-4">Here is my background.</p>
               {educationInfo.map((edu) => (
                 <EduGroup edu={edu} key={edu.id} />
               ))}
+
             </div>
           </div>
         </RoughNotationGroup>
@@ -194,32 +203,41 @@ const AboutSection: React.FC = () => {
   );
 };
 
-const educationInfo = [
+const workInfo = [
   {
     id: 1,
-    title: "B.Sc (Hons) in Computing",
-    subTitle: "Edinburgh Napier University | 2018 ~ 2019",
+    title: "Data scientist",
+    subTitle: "walmart | 2019 - present",
+    list: [""],
+  },
+  {
+    id: 2,
+    title: "Data Analyst",
+    subTitle: "KMK Consulting inc | 2017",
+    list: [""],
+  }
+  
+];
+
+const educationInfo = [
+
+  {
+    id: 1,
+    title: "Masters in Industrial Engineer",
+    subTitle: "Lehigh University , Bethlehem , PA | 2015 ~ 2017",
     list: [
       "Studied computer science, software development, DevOps",
-      "Graduated with First Class Honours",
-      "Got merit in 7 modules out of 9",
     ],
   },
   {
     id: 2,
-    title: "HND in Computing & System Development",
+    title: "Bachelors in mechanical engineering",
     subTitle: "Info Myanmar University | 2016 - 2018",
     list: [
-      "Studied modules specializing in software development",
-      "Passed HND with overall Merit",
+      "Studied modules specializing in software development"
     ],
   },
-  {
-    id: 3,
-    title: "IELTS",
-    subTitle: "British Council Myanmar | 2017",
-    list: ["Got overall band score 6.5."],
-  },
+  
 ];
 
 export default AboutSection;
